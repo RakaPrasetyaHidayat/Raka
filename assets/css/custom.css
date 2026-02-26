@@ -1169,6 +1169,111 @@ section,
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+
+/* ── Tablet Landscape (≤1199px) — Sidebar collapses ── */
+@media (max-width: 1199px) {
+
+  section,
+  .section {
+    padding: 60px 0 !important;
+  }
+
+  .section-title {
+    padding-bottom: 36px;
+  }
+
+  .section-title h2 {
+    font-size: 32px !important;
+  }
+
+  .hero h2 {
+    font-size: 48px !important;
+  }
+
+  .hero p {
+    font-size: 20px !important;
+  }
+
+  .projects-grid {
+    gap: 22px;
+  }
+}
+
+/* ── Tablet Portrait (≤992px) — Grids reduce columns ── */
+@media (max-width: 992px) {
+  .hero h2 {
+    font-size: 40px !important;
+  }
+
+  .hero p {
+    font-size: 18px !important;
+  }
+
+  .hero .hero-subtitle {
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  .hero .hero-cta {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  /* About section — stack photo + info vertically */
+  .about-card {
+    padding: 28px;
+  }
+
+  .about-img-wrapper img {
+    max-width: 240px;
+  }
+
+  .about-info-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  /* Resume — stack to single column */
+  #resume .row.gy-5>.col-lg-6 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  .resume-column-card {
+    padding: 24px;
+  }
+
+  /* Portfolio — single column */
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  .project-thumb img {
+    height: 200px;
+  }
+
+  /* Contact — single column */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contact-card {
+    flex-direction: row;
+    text-align: left;
+    padding: 24px;
+  }
+
+  .contact-card .icon {
+    width: 52px !important;
+    height: 52px !important;
+    min-width: 52px !important;
+    font-size: 20px !important;
+  }
+}
+
+/* ── Mobile Landscape (≤768px) — Full mobile layout ── */
 @media (max-width: 768px) {
   .header {
     width: 280px !important;
@@ -1176,71 +1281,333 @@ section,
   }
 
   .header .profile-img img {
-    width: 100px;
+    width: 90px;
+  }
+
+  section,
+  .section {
+    padding: 50px 0 !important;
+  }
+
+  .section-title {
+    padding-bottom: 28px;
   }
 
   .section-title h2 {
-    font-size: 28px !important;
+    font-size: 26px !important;
+    padding-bottom: 14px;
   }
 
-  .projects-grid {
-    grid-template-columns: 1fr !important;
-    gap: 20px;
+  .section-title p {
+    font-size: 15px;
   }
 
-  .skills-grid {
-    grid-template-columns: 1fr !important;
-    gap: 16px;
+  /* Hero */
+  .hero h2 {
+    font-size: 32px !important;
   }
 
-  .resume-column-card {
+  .hero p {
+    font-size: 17px !important;
+  }
+
+  .hero .hero-subtitle {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+  }
+
+  .hero .hero-cta {
+    padding: 12px 22px;
+    font-size: 13px;
+    margin-top: 20px;
+  }
+
+  /* About — stack everything */
+  .about-card {
     padding: 20px;
+    border-radius: 16px;
   }
 
-  #about .col-lg-4 img {
-    max-width: 200px;
-    margin: 0 auto;
-    display: block;
+  .about-img-wrapper img {
+    max-width: 180px;
+    border-radius: 14px;
   }
 
-  .contact-card {
-    flex-direction: column;
-    text-align: center;
+  .about-name-tag h3 {
+    font-size: 16px !important;
+  }
+
+  .about-name-tag span {
+    font-size: 11px !important;
+  }
+
+  .about-info-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .about-info-grid .info-item {
+    padding: 12px 14px;
     gap: 12px;
   }
 
-  .contact-card .icon {
-    align-self: center;
+  .about-bio {
+    font-size: 14px !important;
+    padding-top: 16px;
   }
 
-  .contact-grid {
-    grid-template-columns: 1fr;
+  /* Skills */
+  #skills .skills-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px;
+  }
+
+  .skill-card {
+    padding: 20px 18px !important;
+    border-radius: 12px !important;
+  }
+
+  #skills .skill-card h3 {
+    font-size: 12px !important;
+    padding: 6px 12px !important;
+  }
+
+  #skills .skill-card li {
+    font-size: 14px !important;
+  }
+
+  /* Resume */
+  .resume-column-card {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .resume-col-header {
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+  }
+
+  .resume-col-header i {
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+    border-radius: 10px;
+  }
+
+  .resume .resume-title {
+    font-size: 18px !important;
+  }
+
+  .resume .resume-item {
+    padding: 0 0 20px 20px !important;
+  }
+
+  .resume .resume-item h4 {
+    font-size: 15px !important;
+  }
+
+  .resume .resume-item p {
+    font-size: 13px !important;
+  }
+
+  /* Portfolio */
+  .project-card {
+    border-radius: 14px !important;
+  }
+
+  .project-thumb img {
+    height: 180px;
+  }
+
+  .project-meta {
+    padding: 12px 16px 6px;
+  }
+
+  .project-meta .stack {
+    font-size: 10px !important;
+    padding: 3px 8px;
+  }
+
+  .project-title {
+    font-size: 17px !important;
+    padding: 4px 16px;
+  }
+
+  .project-desc {
+    font-size: 13px !important;
+    padding: 4px 16px;
   }
 
   .project-actions {
     flex-direction: column;
+    padding: 10px 16px 16px;
+    gap: 8px;
   }
 
   .project-actions .btn {
     width: 100%;
+    padding: 10px 14px;
+    font-size: 12px !important;
+  }
+
+  /* Contact */
+  .contact-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    padding: 24px 16px;
+    border-radius: 14px !important;
+  }
+
+  .contact-card .icon {
+    width: 56px !important;
+    height: 56px !important;
+    min-width: 56px !important;
+    font-size: 22px !important;
+    align-self: center;
+    border-radius: 14px !important;
+  }
+
+  .contact-card .content .title {
+    font-size: 16px !important;
+  }
+
+  .contact-card .content p {
+    font-size: 13px !important;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 28px 0;
+  }
+
+  .site-footer .footer-social a {
+    width: 36px;
+    height: 36px;
+  }
+
+  .site-footer p {
+    font-size: 12px;
   }
 }
 
+/* ── Small Mobile (≤480px) — Tightest layout ── */
 @media (max-width: 480px) {
   .header {
     width: 260px !important;
   }
 
-  .hero h2 {
-    font-size: 28px !important;
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
-  .container {
-    padding-left: 15px;
-    padding-right: 15px;
+  section,
+  .section {
+    padding: 40px 0 !important;
+  }
+
+  .section-title h2 {
+    font-size: 22px !important;
+  }
+
+  .section-title h2::after {
+    width: 36px !important;
+    height: 3px !important;
+  }
+
+  .hero {
+    min-height: 90vh;
+  }
+
+  .hero h2 {
+    font-size: 26px !important;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 15px !important;
+  }
+
+  .hero .hero-subtitle {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .hero .hero-cta {
+    padding: 10px 18px;
+    font-size: 12px;
+  }
+
+  .about-card {
+    padding: 16px;
+  }
+
+  .about-img-wrapper img {
+    max-width: 150px;
+    border-radius: 12px;
+  }
+
+  .about-info-grid .info-item {
+    padding: 10px 12px;
+    gap: 10px;
+    border-radius: 8px;
+  }
+
+  .about-info-grid .info-item i {
+    font-size: 16px;
+  }
+
+  .about-info-grid .info-label {
+    font-size: 10px !important;
+  }
+
+  .about-info-grid .info-value {
+    font-size: 13px !important;
+  }
+
+  .skill-card {
+    padding: 16px 14px !important;
+  }
+
+  .resume-column-card {
+    padding: 16px;
+  }
+
+  .resume-col-header i {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+    border-radius: 8px;
+  }
+
+  .resume .resume-title {
+    font-size: 16px !important;
+  }
+
+  .project-thumb img {
+    height: 160px;
+  }
+
+  .project-title {
+    font-size: 15px !important;
+  }
+
+  .contact-card {
+    padding: 20px 12px;
+  }
+
+  .contact-card .icon {
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    border-radius: 12px !important;
   }
 }
 
+/* ── Desktop (≥992px) — Column spacing ── */
 @media (min-width: 992px) {
   #about .col-lg-4 {
     padding-right: 12px;
