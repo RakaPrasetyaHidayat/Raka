@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <!-- Background gradient -->
+  <defs>
+    <radialGradient id="bgGradient2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+    </radialGradient>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGradient2)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="600" cy="400" r="300" fill="none" stroke="#333333" stroke-width="1" opacity="0.5"/>
+  <circle cx="600" cy="400" r="200" fill="none" stroke="#444444" stroke-width="1" opacity="0.3"/>
+  <circle cx="600" cy="400" r="100" fill="none" stroke="#555555" stroke-width="1" opacity="0.2"/>
+  
+  <!-- Question mark with glow effect -->
+  <g filter="url(#glow2)">
+    <!-- Outer glow circle -->
+    <circle cx="600" cy="400" r="180" fill="none" stroke="#666666" stroke-width="2" opacity="0.6"/>
+    
+    <!-- Large question mark -->
+    <text x="600" y="470" font-family="Space Grotesk, sans-serif" font-size="280" font-weight="700" text-anchor="middle" fill="#ffffff" opacity="0.9">
+      ?
+    </text>
+  </g>
+  
+  <!-- Subtle dots -->
+  <circle cx="250" cy="150" r="3" fill="#666666" opacity="0.4"/>
+  <circle cx="950" cy="180" r="2" fill="#777777" opacity="0.3"/>
+  <circle cx="200" cy="650" r="2" fill="#777777" opacity="0.3"/>
+  <circle cx="1000" cy="700" r="3" fill="#666666" opacity="0.4"/>
+  
+  <!-- Text overlay -->
+  <text x="600" y="650" font-family="Inter, sans-serif" font-size="24" font-weight="300" text-anchor="middle" fill="#888888" opacity="0.7" letter-spacing="2">
+    REACT BOILERPLATE
+  </text>
+</svg>
