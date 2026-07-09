@@ -1691,11 +1691,35 @@ section,
   border: none !important;
   border-radius: 0 !important;
   filter: saturate(0.8);
+  cursor: pointer;
 }
 
 .achievement-card:hover .achievement-thumb img {
   transform: scale(1.08);
   filter: saturate(1);
+}
+
+.achievement-thumb::before {
+  content: 'Lihat Lainnya';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-bright);
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 10;
+}
+
+.achievement-card:hover .achievement-thumb::before {
+  opacity: 1;
 }
 
 .achievement-thumb::after {
